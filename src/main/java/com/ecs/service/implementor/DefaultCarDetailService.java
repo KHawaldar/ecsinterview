@@ -1,6 +1,4 @@
 package com.ecs.service.implementor;
-
-
 import com.ecs.common.FileUtility;
 import com.ecs.domain.CarDetailEntity;
 import com.ecs.exceptions.CarDetailNotFoundException;
@@ -13,7 +11,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -28,6 +25,7 @@ public class DefaultCarDetailService implements CarDetailService {
     private static Logger LOGGER = LoggerFactory.getLogger(DefaultCarDetailService.class);
     @Value("${project.installed.location}")
     private String projectHomeDirectory;
+
     @Override
     public List<CarDetailEntity> getCarDetail(String carModelId) {
         List<CarDetailEntity> carDetailEntityList = FileUtility.loadData(

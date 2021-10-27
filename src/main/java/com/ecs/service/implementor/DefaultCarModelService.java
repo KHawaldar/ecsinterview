@@ -1,5 +1,4 @@
 package com.ecs.service.implementor;
-
 import com.ecs.domain.CarModelEntity;
 import com.ecs.service.adapter.CarModelService;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -8,7 +7,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;

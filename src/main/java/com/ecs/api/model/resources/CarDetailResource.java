@@ -17,7 +17,7 @@ import java.util.UUID;
 @Api(tags = "Car Detail")
 public interface CarDetailResource {
 
-    @PostMapping( value= "/cardetail",produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping( value= "/savecar",produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(code = 202, value = "insert the new car" )
     @ApiResponses({
             @ApiResponse(code = 202, message = "car is created", responseHeaders = {
@@ -25,10 +25,10 @@ public interface CarDetailResource {
     })
     ResponseEntity<String> save(@RequestBody() CarDetail carDetail
                                 );
-    @PutMapping( value= "/carupdate/",produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping( value= "/updatecar",produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(code = 202, value = "update the car" )
     @ApiResponses({
-            @ApiResponse(code = 200, message = "car updated successfully", responseHeaders = {
+            @ApiResponse(code = 202, message = "car updated successfully", responseHeaders = {
             })
     })
     ResponseEntity<String> update(@RequestBody() CarDetail carDetail);
@@ -36,7 +36,7 @@ public interface CarDetailResource {
     @GetMapping( value= "/model/{modelId}/getcardetail",produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(code = 200, value = "get car details" )
     @ApiResponses({
-            @ApiResponse(code = 200, message = "car is created", responseHeaders = {
+            @ApiResponse(code = 200, message = "car detail", responseHeaders = {
             })
     })
     ResponseEntity<CollectionModel<CarDetail>> getCardetails(@PathVariable("modelId") String modelId);

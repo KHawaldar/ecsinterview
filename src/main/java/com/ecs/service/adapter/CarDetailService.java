@@ -2,7 +2,6 @@ package com.ecs.service.adapter;
 
 import com.ecs.domain.CarDetailEntity;
 import com.ecs.exceptions.CarDetailNotFoundException;
-
 import java.util.List;
 
 public interface CarDetailService {

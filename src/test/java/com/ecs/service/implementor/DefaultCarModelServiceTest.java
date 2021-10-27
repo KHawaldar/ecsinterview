@@ -1,13 +1,10 @@
 package com.ecs.service.implementor;
-
 import com.ecs.domain.CarModelEntity;
 import com.ecs.service.adapter.CarModelService;
 import org.assertj.core.api.Assertions;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.List;
 
 public class DefaultCarModelServiceTest extends ServiceTest{

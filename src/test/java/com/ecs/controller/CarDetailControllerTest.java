@@ -1,7 +1,5 @@
 package com.ecs.controller;
-
 import com.ecs.api.model.CarDetail;
-import com.ecs.exceptions.CarDetailNotFoundException;
 import org.junit.jupiter.api.Test;
 
 public class CarDetailControllerTest extends ControllerTest{
@@ -14,7 +12,7 @@ public class CarDetailControllerTest extends ControllerTest{
                 .colour("green")
                 .year(2020)
                 .build();
-        this.webClient.post().uri("/ecs/carapi/v1/cardetail")
+        this.webClient.post().uri("/ecs/carapi/v1/savecar")
                 .bodyValue(carDetail)
                 .exchange()
                 .expectStatus().isCreated();
@@ -46,11 +44,9 @@ public class CarDetailControllerTest extends ControllerTest{
                 .year(2032)
                 .build();
 
-        this.webClient.put().uri("/ecs/carapi/v1/carupdate/")
+        this.webClient.put().uri("/ecs/carapi/v1/updatecar/")
                 .bodyValue(carDetail)
                 .exchange()
                 .expectStatus().is2xxSuccessful();
     }
-
-
 }

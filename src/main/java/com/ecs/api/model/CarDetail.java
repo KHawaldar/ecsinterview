@@ -10,6 +10,7 @@ import java.util.UUID;
 @EqualsAndHashCode(callSuper=false)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CarDetail extends RepresentationModel<CarDetail> {
+
     private String carDetailId;
     private String carModelId;
     private Integer year;

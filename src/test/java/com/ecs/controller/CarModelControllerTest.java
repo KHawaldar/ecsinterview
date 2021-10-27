@@ -1,5 +1,4 @@
 package com.ecs.controller;
-
 import org.junit.jupiter.api.Test;
 
 public class CarModelControllerTest extends ControllerTest {

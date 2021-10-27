@@ -1,19 +1,14 @@
 package com.ecs.controller;
-
 import com.ecs.api.model.CarMaker;
 import com.ecs.api.model.resources.CarMakerResource;
 import com.ecs.assembler.CarMakerAssembler;
 import com.ecs.domain.CarMakerEntity;
 import com.ecs.service.adapter.CarMakerService;
-import com.ecs.service.adapter.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-
-
 import java.util.List;
 import java.util.Optional;
 
@@ -36,10 +31,8 @@ public class CarMakerController implements CarMakerResource {
     public ResponseEntity<CarMaker> getCarMakerById(String carmakerId) {
            Optional<CarMakerEntity> carMakerEntity = carService.getCarMakerEntity(carmakerId);
            if(carMakerEntity.isPresent()) {
-
                return new ResponseEntity<>(carMakerAssembler.toModel(carMakerEntity.get()),HttpStatus.OK );
-           }else
-           {
+           }else{
                return new ResponseEntity<>(carMakerAssembler.toModel(carMakerEntity.get()),HttpStatus.NOT_FOUND );
            }
 

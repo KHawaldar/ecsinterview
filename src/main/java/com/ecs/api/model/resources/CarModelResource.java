@@ -1,6 +1,5 @@
 package com.ecs.api.model.resources;
 
-import com.ecs.api.model.CarMaker;
 import com.ecs.api.model.CarModel;
 import io.swagger.annotations.*;
 import org.springframework.hateoas.CollectionModel;
