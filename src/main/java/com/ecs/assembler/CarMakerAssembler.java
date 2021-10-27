@@ -10,7 +10,6 @@ import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSuppor
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -71,16 +70,7 @@ public class CarMakerAssembler extends RepresentationModelAssemblerSupport<CarMa
     public CollectionModel<CarMaker> toCollectionModel(Iterable<? extends CarMakerEntity> entities){
 
         CollectionModel<CarMaker> actorModels = super.toCollectionModel(entities);
-       actorModels.add(linkTo(methodOn(CarMakerController.class).getCarMakers()).withSelfRel());
-
-       // actorModels.add(linkTo(methodOn(CarModelController.class).getCarMakers()).withSelfRel());
-    /*  actorModels.getContent().stream().
-                map(a-> actorModels.add(linkTo(methodOn(CarModelController.class).
-                        getCarModels(
-                                a.getCarmakerId().toString())).withSelfRel()));
-*/
-
-
+        actorModels.add(linkTo(methodOn(CarMakerController.class).getCarMakers()).withSelfRel());
         return actorModels;
     }
 }

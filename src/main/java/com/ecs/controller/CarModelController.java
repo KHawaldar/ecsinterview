@@ -23,6 +23,7 @@ public class CarModelController implements CarModelResource {
     CarModelService carService;
     @Autowired
     CarModelAssembler carModelAssembler;
+
     @Override
     public ResponseEntity<CollectionModel<CarModel>> getCarModels(String carmakerId) {
       List<CarModelEntity> carModelEntityList =  carService.getCarModel(carmakerId);

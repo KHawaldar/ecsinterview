@@ -34,8 +34,6 @@ public class SwaggerDocConfig {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build()
-                //.directModelSubstitute(org.threeten.bp.LocalDate.class, java.sql.Date.class)
-                //.directModelSubstitute(org.threeten.bp.OffsetDateTime.class, java.util.Date.class)
                 .apiInfo(apiInfo());
     }
 }

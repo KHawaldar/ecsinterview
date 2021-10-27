@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -43,7 +42,6 @@ public class DefaultCarMakerService implements CarMakerService {
     public Optional<CarMakerEntity> getCarMakerEntity(String carMakerId) {
 
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        CarMakerEntity carMakerEntity = null;
         Optional<CarMakerEntity> carMakerOptional = Optional.empty();
         try {
                 InputStream in = new FileInputStream(getClass().getClassLoader().getResource("carmaker.json")
