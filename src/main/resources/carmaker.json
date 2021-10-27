@@ -1,0 +1,50 @@
+[
+  {
+
+    "carmakerId": "1" ,
+    "makercode": "audi",
+    "make": "adui",
+    "isDeleted": false,
+   "carModelEntityList": [
+     {
+       "carmodelId": "1",
+       "carmakerId" : "1",
+       "modelCode": "80",
+       "model": "80",
+       "isDeleted": false
+     },
+     {
+       "carmodelId": "2",
+       "carmakerId" : "1",
+       "modelCode": "A1",
+       "model": "A1",
+       "isDeleted": false
+     }
+   ]
+
+  },
+  {
+
+    "carmakerId": "2" ,
+    "makercode": "bmw",
+    "make": "bmw",
+    "isDeleted": false,
+    "carModelEntityList": [
+      {
+        "carmodelId": "1",
+        "carmakerId" : "2",
+        "modelCode": "1 series",
+        "model": "1 series",
+        "isDeleted": false
+      },
+      {
+        "carmodelId": "2",
+        "carmakerId" : "2",
+        "modelCode": "2 series",
+        "model": "2 series",
+        "isDeleted": false
+      }
+    ]
+
+  }
+]
